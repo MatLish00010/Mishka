@@ -14,11 +14,48 @@
     align-items: center;
 
 
-    padding: 20px 20px;
+    padding: 10px 40px;
     margin: 0;
-    min-height: 55px;
 
     border: 1px #ececec solid;
+
+    &:nth-child(2){
+      border-right: none;
+    }
+
+    &:nth-child(3){
+      border-left: none;
+      padding-right: 100px;
+    }
+
+  }
+
+  &__link{
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  &__link--search {
+    @include png-sprite($icon-search);
+
+    .show-mobile {
+      display: none;
+    }
+  }
+
+  &__link--basket {
+    display: block;
+    padding-left: 30px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      @include png-sprite($icon-cart);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__button {

@@ -1,32 +1,35 @@
-<header class="header container">
-    <nav class="menu">
-        <ul class="menu__list">
-            <li class="menu__item">
-                <a href="#" class="menu__link">Каталог товаров</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Вязание на заказ</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">
-                    <picture>
-                        <source media="(min-width: 769px)" srcset="../../images/iconic/logo-desktop.svg">
-                        <source media="(min-width: 300px)" srcset="../../images/iconic/logo-tablet.svg">
-                        <img class="menu__link-logo" src="../../images/iconic/logo-mobile.svg"
-                             alt="Логотип Mishka">
-                    </picture>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link menu__link--search"><span class="show-mobile">Поиск по сайту</span></a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link menu__link--basket">Корзина:<span class="basket-info">пока пуста</span></a>
-            </li>
-        </ul>
-    </nav>
-    <div class="menu__button">
-        <button class="js-menu-toggle"></button>
+<header class="header">
+    <div class="header-wrap">
+        <h1 class="visually-hedden">Мишка</h1>
+        <div class="header__logo">
+            <picture>
+                <source media="(min-width: 1150px)" srcset="../../images/iconic/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="../../images/iconic/logo-tablet.svg">
+                <img src="../../images/iconic/logo-mobile.svg" alt="Logo">
+            </picture>
+        </div>
+        <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button"
+                title="menu">Меню
+        </button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--form">Вязание на заказ</a>
+                </li>
+            </ul>
+            <ul class="main-nav__user-list">
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--search">Поиск по сайту</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--basket">
+                        Корзина: <span>пока пуста</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-
 </header>

@@ -2,6 +2,10 @@
   border-top: 1px #ececec solid;
 
   @include tablet {
+    border-bottom: 1px solid #ececec;
+  }
+
+  @include tablet {
     border-bottom: 1px #ececec solid;
   }
 
@@ -35,6 +39,17 @@
     text-align: center;
     min-height: 78px;
     width: 100%;
+
+    @include tablet {
+      position: absolute;
+      z-index: 5;
+      top: 22px;
+      border-bottom: none;
+      width: auto;
+      display: block;
+      left: 7%;
+    }
+
   }    
 }
 
@@ -45,14 +60,23 @@
   width: 100%;
   z-index: 3;
 
+  &--closed {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__item {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #ececec;
-  }
 
-  &--closed {
-    display: none;
+    @include tablet {
+      border: none;
+    }
+
   }
 
   &--opened {
@@ -69,6 +93,10 @@
     border: 0;
     outline: 0;
     background-color: #fff;
+
+    @include tablet {
+      display: none;
+    }
 
     &--closed:before {
       content: "";
@@ -104,6 +132,17 @@
     padding: 0;
     margin: 0;
     background-color: #fff;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 50px;
+      background-color: transparent;
+      z-index: 10;
+    }
+
   }
 
   &__link {
@@ -123,6 +162,18 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        @include tablet {
+          transform: translate(170%,-50%);
+        }
+
+      }
+
+      @include tablet {
+        font-size: 0;
+        width: 82px;
+        border-left: 1px #ececec solid;
+        padding: 32px 0;
       }
     }
 
@@ -134,18 +185,42 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        @include tablet {
+          transform: translate(100%, -50%);
+        }
+
+      }
+
+      @include tablet {
+        padding: 32px 50px 32px 83px;
+        border-left: 1px #ececec solid;
+        width: 182px;
       }
     }
-  }
 
-  .main-nav--closed {
-    display: none;
+    &--catalog, &--form {
+      @include tablet {
+        font-size: 15px;
+        line-height: 24px;
+        padding: 18px 0;
+        width: 170px;
+      }
+    }
+
   }
 
   &__user-list {
     background-color: #fff;
     padding: 0;
     margin: 0;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
   }
 
 }

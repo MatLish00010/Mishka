@@ -40,6 +40,21 @@
 }
 
 .main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+
   &__toggle {
     position: absolute;
     top: 30px;
@@ -61,10 +76,71 @@
       background-color: #000;
       box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
     }
+
+    &--opened:before, &--opened:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 22px;
+      height: 2px;
+      background-color: #000000;
+    }
+
+    &--opened:before {
+      transform: rotate(45deg);
+    }
+
+    &--opened:after {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  &__list {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  &__link {
+    display: block;
+    border-bottom: 1px solid #ececec;
+    padding: 27px 27px 27px 76px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
+    position: relative;
+
+    &--search {
+      &:before {
+        content: "";
+        position: absolute;
+        @include png-sprite($icon-search);
+        left: 50px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--basket {
+      &:before {
+        content: "";
+        position: absolute;
+        @include png-sprite($icon-cart);
+        left: 50px;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   .main-nav--closed {
     display: none;
+  }
+
+  &__user-list {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
   }
 
 }

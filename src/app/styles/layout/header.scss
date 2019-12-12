@@ -42,15 +42,21 @@
 
     @include tablet {
       position: absolute;
-      z-index: 5;
       top: 22px;
       border-bottom: none;
       width: auto;
       display: block;
+      z-index: 10;
       left: 7%;
     }
 
-  }    
+    @include desktop {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10px;
+    }
+
+  }
 }
 
 .main-nav {
@@ -58,13 +64,26 @@
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
+
+  @include tablet {
+    position: static;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &--closed {
     display: none;
 
     @include tablet {
       display: block;
+    }
+
+    @include desktop {
+      display: flex;
     }
   }
 
@@ -127,7 +146,7 @@
       transform: rotate(-45deg);
     }
   }
-  
+
   &__list {
     padding: 0;
     margin: 0;
@@ -141,6 +160,10 @@
       left: 50px;
       background-color: transparent;
       z-index: 10;
+    }
+
+    @include desktop {
+      position: static;
     }
 
   }
@@ -164,7 +187,7 @@
         transform: translateY(-50%);
 
         @include tablet {
-          transform: translate(170%,-50%);
+          transform: translate(170%, -50%);
         }
 
       }
@@ -206,8 +229,22 @@
         padding: 18px 0;
         width: 170px;
       }
+
+      @include desktop {
+        border-right: 1px solid #ececec;
+        padding: 32px 18px 32px 50px;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+      }
     }
 
+    &--form {
+      @include desktop {
+        border-right: none;
+      }
+    }
   }
 
   &__user-list {
@@ -220,7 +257,5 @@
       flex-direction: row;
       justify-content: flex-end;
     }
-
   }
-
 }

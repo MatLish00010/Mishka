@@ -1,26 +1,32 @@
-<header class="header">
-    <div class="container">
-        <div class="menu__button">
-            <button class="js-menu-toggle"></button>
-        </div>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <a href="#" class="menu__link js-scroll">Каталог товаров</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link js-scroll">Вязание на заказ</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link js-scroll">Будет картинка</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link js-scroll"><span class="show-mobile">Поиск по сайту</span></a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link js-scroll">Корзина:<span class="basket-info">пока пуста</span></a>
-                </li>
-            </ul>
-        </nav>
+<header class="header container">
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Каталог товаров</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Вязание на заказ</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    <picture>
+                        <source media="(min-width: 1300px)" srcset="../../images/iconic/logo-desktop.svg">
+                        <source media="(min-width: 768px)" srcset="../../images/iconic/logo-tablet.svg">
+                        <img class="menu__link-logo" src="../../images/iconic/logo-mobile.svg"
+                             alt="Логотип Mishka">
+                    </picture>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link"><span class="show-mobile">Поиск по сайту</span></a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Корзина:<span class="basket-info">пока пуста</span></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="menu__button">
+        <button class="js-menu-toggle"></button>
     </div>
+
 </header>

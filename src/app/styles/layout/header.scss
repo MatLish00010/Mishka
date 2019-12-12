@@ -25,7 +25,6 @@
       border-top: none;
       min-height: 90px;
     }
-
   }
 
   &__logo {
@@ -55,7 +54,6 @@
       transform: translateX(-50%);
       top: 10px;
     }
-
   }
 }
 
@@ -95,7 +93,6 @@
     @include tablet {
       border: none;
     }
-
   }
 
   &--opened {
@@ -165,7 +162,6 @@
     @include desktop {
       position: static;
     }
-
   }
 
   &__link {
@@ -189,7 +185,6 @@
         @include tablet {
           transform: translate(170%, -50%);
         }
-
       }
 
       @include tablet {
@@ -212,7 +207,6 @@
         @include tablet {
           transform: translate(100%, -50%);
         }
-
       }
 
       @include tablet {

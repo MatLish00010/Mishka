@@ -1,0 +1,18 @@
+.hero {
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  
+  &__wrap--index {
+    background-image: url(../../images/big_img/hero-mobile@2x.jpg);
+    -webkit-background-size: auto 373px;
+    background-size: auto 373px;
+  }
+
+  &__wrap--index {
+    background: #f9f9f9 url("../../images/big_img/hero-mobile@1x.jpg") no-repeat center -18px;
+    overflow: hidden;
+    min-height: 470px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}

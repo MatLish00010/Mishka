@@ -1,5 +1,19 @@
 {%  extends 'layout/base.twig' %}
 {% block title %}mishka.by{%  endblock %}
-{% block body %}
+{% block main %}
+    <main>
     {% include 'components/hero.twig' %}
+    {% include 'components/product.twig' with
+        {
+            'description' : "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках,
+                и трех размерах.",
+
+            'color' : "Тиффани/серый",
+
+            'diameter' : "25 см",
+
+            'height' : "15 см"
+        }
+    %}
+    </main>
 {%  endblock %}

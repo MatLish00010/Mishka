@@ -29,10 +29,7 @@
 
   &__wrap--index {
     background: #f9f9f9 url("../../images/big_img/hero-mobile@1x.jpg") no-repeat center -18px;
-    overflow: hidden;
     min-height: 470px;
-    margin: 0 auto;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
 
@@ -50,7 +47,7 @@
     display: none;
 
     @include tablet {
-      padding: 0 50px;
+      padding: 0 80px;
       position: absolute;
       left: 0;
       top: 0;
@@ -76,7 +73,6 @@
           @include desktop {
             display: flex;
             font-weight: bold;
-            margin-right: 60px;
           }
         }
       }

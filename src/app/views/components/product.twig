@@ -24,13 +24,15 @@
                 <picture>
                     {% block retina %}
                         {% include 'img.twig' with {
-                            'title' : 'Retina components example',
+                            'title' : 'Корзины',
                             'img_class' : 'product-img',
                             'src' : '../../images/big_img/triple-set.jpg',
                         } %}
                     {% endblock %}
                 </picture>
             </div>
+            <span class="product__price">Цена: {{ price }}.</span>
+            <a href="#" class="product__btn btn">Заказать</a>
         </div>
     </div>
 </section>

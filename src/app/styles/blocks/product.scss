@@ -45,7 +45,33 @@
   }
 
   &-img {
+    align-self: center;
+    padding-top: 27px;
+    padding-bottom: 24px;
+    line-height: 0;
+    text-align: center;
+    box-sizing: border-box;
     width: 260px;
     height: 315px;
+  }
+
+  &__price, &__btn {
+    align-self: center;
+    padding-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #444444;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 2px #444444 solid;
+    outline: none;
+    width: 100%;
   }
 }

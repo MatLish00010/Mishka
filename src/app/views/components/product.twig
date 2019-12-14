@@ -12,18 +12,24 @@
                     <td class="product__value">{{ color }}</td>
                 </tr>
                 <tr class="product__specification">
-                    <td class="product__options">Диаметр: </td>
+                    <td class="product__options">Диаметр:</td>
                     <td class="product__value">{{ diameter }}</td>
                 </tr>
                 <tr class="product__specification">
                     <td class="product__options">Высота :</td>
-                    <td class="product__value">{{ height}}</td>
+                    <td class="product__value">{{ height }}</td>
                 </tr>
             </table>
-            <div class="product__photo">
-                <source media="(min-width: 1150px)" srcset= "{{ desktop1x2x }}">
-                <source media="(min-width: 768px)" srcset= "{{ tablet1x2x }}">
-                <img src="{{ mobile1x }}" srcset="{{ mobile2x }}" alt="Корзинки">
+            <div class="product__img">
+                <picture>
+                    {% block retina %}
+                        {% include 'img.twig' with {
+                            'title' : 'Retina components example',
+                            'img_class' : 'product-img',
+                            'src' : '../../images/big_img/triple-set.jpg',
+                        } %}
+                    {% endblock %}
+                </picture>
             </div>
         </div>
     </div>

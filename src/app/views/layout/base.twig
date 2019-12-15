@@ -11,6 +11,11 @@
 <body>
 <div class="wrap">
     {% include 'header.twig' %}
+    <main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
 </div>
 {% block scripts %}
     <script>

@@ -10,14 +10,10 @@
 </head>
 <body>
 <div class="wrap">
-    {% include 'header.twig' %}
-    {% block main %}
-
-     {% endblock %}
-{#     {% include 'footer.twig' %}#}
+{% include 'header.twig' %}
 </div>
 {% block scripts %}
-    <script>
+    {#<script>
         var navMain = document.querySelector('.main-nav');
         var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -38,7 +34,7 @@
                 navToggle.classList.remove('main-nav__toggle--opened');
             }
         });
-    </script>
+    </script>#}
 {% endblock %}
 </body>
 </html>

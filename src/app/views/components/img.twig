@@ -11,6 +11,7 @@
         <source media="(min-width: 961px)"
                 srcset="{{ src }} 1x, {{ src | replace({'.' : '@2x.'}) }}">
     {% endif %}
+
     <img {% if img_class %} class="{{ img_class }} {% endif %}"
                             src="{{ src }}"
                             srcset="{{ src }} 1x, {{ src | replace({'.' : '@2x.'}) }}"

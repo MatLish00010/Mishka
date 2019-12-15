@@ -1,13 +1,5 @@
 .header {
 
-  &__title {
-    &--logo {
-      @include mobile {
-        display: none;
-      }
-    }
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -15,12 +7,15 @@
     padding: 0;
     margin: 0;
 
-    &--opened {
-      display: block;
-    }
+    @include mobile {
 
-    &--closed {
-      display: none;
+      &--opened {
+        display: block;
+      }
+
+      &--closed {
+        display: none;
+      }
     }
   }
 
@@ -36,8 +31,19 @@
       font-weight: bold;
     }
 
+    &--logo {
+
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: block;
+      }
+    }
+
     &--search {
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -50,6 +56,7 @@
 
     &--basket {
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -72,11 +79,17 @@
 
       border-bottom: 2px #ececec solid;
 
+      @include tablet {
+        display: none;
+      }
     }
 
     &--minor {
       @include mobile {
         display: none;
+      }
+      @include tablet {
+        display: block;
       }
     }
 
@@ -93,9 +106,8 @@
       border: none;
 
       &--cross {
-        @include  png-sprite($icon-menu-close);
+        @include png-sprite($icon-menu-close);
       }
-
     }
   }
 

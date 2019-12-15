@@ -1,5 +1,4 @@
 .header {
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -20,7 +19,6 @@
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 2px #ececec solid;
       margin-left: -20px;
       margin-right: -20px;
 
@@ -86,7 +84,6 @@
       @include tablet {
         border-bottom: none;
       }
-
     }
 
     &--catalog, &--order, &--new, &--sale {
@@ -174,17 +171,18 @@
         padding-left: 80px;
       }
     }
-
   }
 
   &-nav {
+    &--main {
+      border-bottom: 2px #ececec solid;
+    }
+
     &--mobile {
       position: relative;
       margin: 20px -20px 0;
       display: flex;
       justify-content: center;
-
-      border-bottom: 2px #ececec solid;
 
       @include tablet {
         display: none;
@@ -218,6 +216,4 @@
       }
     }
   }
-
-
 }

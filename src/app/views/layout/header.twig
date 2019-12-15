@@ -1,7 +1,7 @@
 <header class="header">
-    <div class="container">
-        <nav class="header-nav">
-            <div class="header-nav header__nav--main">
+    <nav class="header-nav">
+        <div class="header-nav header-nav--main">
+            <div class="container">
                 <div class="header-nav header-nav--mobile">
                     {% include '../components/img.twig' with {
                         'title': 'Mishka-logo',
@@ -36,29 +36,29 @@
                     </li>
                 </ul>
             </div>
-            <div class="header-nav header-nav--minor">
-                <ul class="header__list header__list--minor">
-                    <li class="header__title header__title--catalog">
-                        <a href="#">Каталог товаров</a>
+        </div>
+        <div class="header-nav header-nav--minor container">
+            <ul class="header__list header__list--minor">
+                <li class="header__title header__title--catalog">
+                    <a href="#">Каталог товаров</a>
+                </li>
+                <li class="header__title header__title--order">
+                    <a href="#">Вязание на заказ</a>
+                </li>
+            </ul>
+            <ul class="header__list header__list--info">
+                <ul class="header__list-shop">
+                    <li class="header__title header__title--new">
+                        <a href="#">Новые поступления</a>
                     </li>
-                    <li class="header__title header__title--order">
-                        <a href="#">Вязание на заказ</a>
-                    </li>
-                </ul>
-                <ul class="header__list header__list--info">
-                    <ul class="header__list-shop">
-                        <li class="header__title header__title--new">
-                            <a href="#">Новые поступления</a>
-                        </li>
-                        <li class="header__title header__title--sale">
-                            <a href="#">Распродажа</a>
-                        </li>
-                    </ul>
-                    <li class="header__title header__title--delivery">
-                        <a href="#">Доставка по всей России</a>
+                    <li class="header__title header__title--sale">
+                        <a href="#">Распродажа</a>
                     </li>
                 </ul>
-            </div>
-        </nav>
-    </div>
+                <li class="header__title header__title--delivery">
+                    <a href="#">Доставка по всей России</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>

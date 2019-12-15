@@ -1,12 +1,61 @@
 <header class="header">
     <div class="container">
-        <nav class="header__nav">
-            <div class="header__nav header__nav-main">
-                {% include 'components/img.twig' with {
-                    'title': 'Mishka-mobile',
-                    'img_class' : 'header__logo-mobile',
-                    'src' : '/images/iconic/logo-mobile.svg',
-                } %}
+        <nav class="header-nav">
+            <div class="header-nav header__nav--main">
+                <div class="header-nav header-nav--mobile">
+                    {% include '../components/img.twig' with {
+                        'title': 'Mishka-logo',
+                        'img_class' : 'header__logo-mobile',
+                        'src' : '/images/iconic/mishka-logo-mobile.png',
+                    } %}
+                    <button class="header-nav__toggle header-nav__toggle--cross" type="button">
+                        <span class="visually-hidden">Открыть меню</span>
+                    </button>
+                </div>
+                <ul class="header__list">
+                    <li class="header__title header__title--catalog">
+                        <a href="#">Каталог товаров</a>
+                    </li>
+                    <li class="header__title header__title--order">
+                        <a href="#">Вязание на заказ</a>
+                    </li>
+                    <li class="header__title header__title--logo">
+                        <a href="#">{% include '../components/img.twig' with {
+                                'title': 'Mishka-logo',
+                                'img_class' : 'header__logo',
+                                'tablet_src' : '/images/iconic/mishka-logo-tablet.png',
+                                'src' : '/images/iconic/mishka-logo-desktop.png',
+                                'responsive' : 'true',
+                            } %}</a>
+                    </li>
+                    <li class="header__title header__title--search">
+                        <a href="#">Поиск по сайту</a>
+                    </li>
+                    <li class="header__title header__title--basket">
+                        <a href="#">Корзина:<span>пока пуста</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-nav header-nav--minor">
+                <ul class="header__list header__list--minot">
+                    <li class="header__title header__title--catalog">
+                        <a href="#">Каталог товаров</a>
+                    </li>
+                    <li class="header__title header__title--order">
+                        <a href="#">Вязание на заказ</a>
+                    </li>
+                </ul>
+                <ul class="header__list header__list--info">
+                    <li class="header__title header__title--new">
+                        <a href="#">Новые поступления</a>
+                    </li>
+                    <li class="header__title header__title--sale">
+                        <a href="#">Распродажа</a>
+                    </li>
+                    <li class="header__title header__title--delivery">
+                        <a href="#">Доставка по всей России</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>

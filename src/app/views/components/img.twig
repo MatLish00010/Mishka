@@ -4,11 +4,11 @@
                 srcset="{{ mobile_src }} 1x, {{ mobile_src | replace({'.' : '@2x.'}) }}">
     {% endif %}
     {% if responsive and tablet_src %}
-        <source media="(min-width: 768px) and (max-width: 960px)"
+        <source media="(min-width: 768px) and (max-width: 1149px)"
                 srcset="{{ tablet_src }} 1x, {{ tablet_src | replace({'.' : '@2x.'}) }}">
     {% endif %}
     {% if responsive and src %}
-        <source media="(min-width: 961px)"
+        <source media="(min-width: 1150px)"
                 srcset="{{ src }} 1x, {{ src | replace({'.' : '@2x.'}) }}">
     {% endif %}
 

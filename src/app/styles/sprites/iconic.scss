@@ -27,14 +27,8 @@
 @function iconic-char($filename) {
 	$char: "";
 
-	@if $filename == logo-desktop {
-		$char: "\E001";
-	}
-	@if $filename == logo-mobile {
-		$char: "\E002";
-	}
 	@if $filename == logo-tablet {
-		$char: "\E003";
+		$char: "\E001";
 	}
 
 	@return $char;
@@ -51,12 +45,6 @@
 	}
 }
 
-.iconic-logo-desktop {
-	@include iconic(logo-desktop);
-}
-.iconic-logo-mobile {
-	@include iconic(logo-mobile);
-}
 .iconic-logo-tablet {
 	@include iconic(logo-tablet);
 }

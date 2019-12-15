@@ -28,13 +28,44 @@
 
       &--minor {
         justify-content: start;
-
-        & .header__title--catalog, & .header__title--order {
-          display: block;
-        }
       }
 
       &--minor, &--info {
+        border: none;
+      }
+    }
+
+    @include desktop {
+      margin-left: 0;
+      margin-right: 0;
+      border-right: 2px #ececec solid;
+      border-left: 2px #ececec solid;
+    }
+
+    &--minor {
+      border: none;
+
+      & .header__title--catalog, & .header__title--order {
+        @include tablet {
+          display: block;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+
+    @include desktop {
+      &-shop {
+        display: flex;
+        padding: 0;
+        border: none;
+      }
+
+      &--info {
+        justify-content: space-between;
+        width: 100%;
         border: none;
       }
     }
@@ -65,6 +96,10 @@
       @include tablet {
         display: none;
       }
+
+      @include desktop {
+        display: block;
+      }
     }
 
     &--logo {
@@ -73,6 +108,15 @@
       }
       @include tablet {
         display: block;
+      }
+    }
+
+    &--catalog {
+      @include desktop {
+        border-right: 2px #ececec solid;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 20px;
       }
     }
 
@@ -99,6 +143,11 @@
         border-left: 2px #ececec solid;
         border-right: 2px #ececec solid;
         margin: 0 0 0 200px;
+      }
+
+      @include desktop {
+        margin: 0 0 0;
+
       }
     }
 
@@ -132,7 +181,6 @@
   }
 
   &-nav {
-
     &--mobile {
       position: relative;
       margin: 20px -20px 0;

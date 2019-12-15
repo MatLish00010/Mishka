@@ -21,7 +21,6 @@
       flex-direction: row;
       justify-content: space-between;
       border-bottom: 2px #ececec solid;
-      border-top: 2px #ececec solid;
       margin-left: -20px;
       margin-right: -20px;
 
@@ -38,8 +37,6 @@
     @include desktop {
       margin-left: 0;
       margin-right: 0;
-      border-right: 2px #ececec solid;
-      border-left: 2px #ececec solid;
     }
 
     &--minor {

@@ -103,6 +103,9 @@
       @include tablet {
         display: block;
       }
+      @include desktop {
+        margin-left: -10px;
+      }
     }
 
     &--catalog {
@@ -153,6 +156,9 @@
     &--order {
       @include tablet {
         margin-left: 30px;
+      }
+      @include desktop {
+        margin-left: -10px;
       }
     }
 

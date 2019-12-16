@@ -1,0 +1,48 @@
+<section class="product-index">
+    <div class="container">
+        <div class="product">
+            <div class="product-head">
+                <h2 class="product-head__title">{{ title }}</h2>
+                <h3 class="product-head__week">Товар недели</h3>
+            </div>
+            <div class="product-info">
+                <p class="product-info__description">{{ description }}</p>
+                <table class="product-info__params">
+                    <tr>
+                        <td class="product-info__key">Цвет:</td>
+                        <td class="product-info__value">{{ color }}</td>
+                    </tr>
+                    <tr>
+                        <td class="product-info__key">Диаметр:</td>
+                        <td class="product-info__value">{{ diameter }}</td>
+                    </tr>
+                    <tr>
+                        <td class="product-info__key">Высота:</td>
+                        <td class="product-info__value">{{ height }}</td>
+                    </tr>
+                </table>
+                {% include 'img.twig' with {
+                    'title' : 'Basket',
+                    'img_class' : 'product-info__img',
+                    'src' : '/images/big_img/triple-set-mobile.jpg',
+                    'mobile_src' : '/images/big_img/triple-set-mobile.jpg'
+                } %}
+                <div class="product-info__cost">
+                    <p>Цена: <span>{{  cost }}</span></p>
+                </div>
+                <button class="product-info__btn btn" type="button">
+                    <a href="#">Заказать</a>
+                </button>
+            </div>
+            <div class="product__img">
+                {% include 'img.twig' with {
+                    'title' : 'Basket',
+                    'img_class' : 'product__img',
+                    'src' : '/images/big_img/triple-set-desktop.jpg',
+                    'tablet_src' : '/images/big_img/triple-set-tablet.jpg',
+                    'responsive' : 'true'
+                }%}
+            </div>
+        </div>
+    </div>
+</section>

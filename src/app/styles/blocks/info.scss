@@ -1,0 +1,54 @@
+.info-section {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  position: relative;
+
+  @include tablet {
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url(../../images/svg-icon/zigzag-line.png);
+      width: 100%;
+      height: 19px;
+      top: -60px;
+    }
+  }
+}
+
+.info {
+  &__title {
+    font-size: 25px;
+    @include tablet {
+      font-size: 43px;
+    }
+    @include desktop {
+      font-size: 53px;
+    }
+  }
+
+  &__list {
+    padding-left: 20px;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    margin-top: 40px;
+    margin-left: 0;
+    width: 40%;
+
+    @include tablet {
+      margin-top: 60px;
+    }
+
+    p {
+      margin: 0;
+      font-weight: bold;
+      max-width: 296px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<section class="info-section">
+    <div class="container">
+        <h2 class="info__title">{{ title }}</h2>
+
+        <ul class="info__list">
+            {% for item in info %}
+                <li class="info__item">
+                    <img src="{{ item.img_url }}" alt="{{ alt }}">
+                    <p>{{ item.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -9,8 +9,13 @@
   position: relative;
 
   @include tablet {
+    min-height: 400px;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @include desktop {
+    min-height: 670px;
   }
 
   &-head {

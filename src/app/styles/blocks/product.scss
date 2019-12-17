@@ -3,21 +3,46 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   &-head {
+
+    @include tablet {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
     &__title {
       margin: 5px 0;
+
+      @include tablet {
+        font-size: 45px;
+      }
     }
 
     &__week {
       margin: 5px 0;
+      padding: 0;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 18px;
       color: #8dddcd;
+      @include tablet {
+        text-align: center;
+        max-width: 100px;
+      }
     }
   }
 
   &-info {
+    @include tablet {
+      max-width: 50%;
+    }
 
     &__params {
       width: 100%;
@@ -28,6 +53,12 @@
         border-bottom: 2px #ececec solid;
         display: flex;
         justify-content: space-between;
+      }
+    }
+
+    &__img {
+      @include tablet {
+        display: none;
       }
     }
 
@@ -62,6 +93,7 @@
 
       background-color: #fff;
       border: 2px black solid;
+
       & a {
         font-size: 17px;
         text-transform: uppercase;

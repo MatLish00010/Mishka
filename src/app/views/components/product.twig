@@ -28,11 +28,13 @@
                     'mobile_src' : '/images/big_img/triple-set-mobile.jpg'
                 } %}
                 <div class="product-info__cost">
-                    <p>Цена: <span>{{  cost }}</span></p>
+                    <p>Цена: <span>{{ cost }}</span></p>
                 </div>
-                <button class="product-info__btn btn" type="button">
-                    <a href="#">Заказать</a>
-                </button>
+                <div class="product-info__wrap">
+                    <button class="product-info__btn btn" type="button">
+                        <a href="#">Заказать</a>
+                    </button>
+                </div>
             </div>
             <div class="product__img">
                 {% include 'img.twig' with {
@@ -41,7 +43,7 @@
                     'src' : '/images/big_img/triple-set-desktop.jpg',
                     'tablet_src' : '/images/big_img/triple-set-tablet.jpg',
                     'responsive' : 'true'
-                }%}
+                } %}
             </div>
         </div>
     </div>

@@ -1,37 +1,45 @@
-/* Slider */
-
-.slick-slider {
+.slick-slider
+{
     position: relative;
+
     display: block;
     box-sizing: border-box;
-    -webkit-touch-callout: none;
+
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
-.slick-list {
+
+.slick-list
+{
     position: relative;
-    overflow: hidden;
+
     display: block;
+    overflow: hidden;
+
     margin: 0;
     padding: 0;
-
-    &:focus {
-        outline: none;
-    }
-
-    &.dragging {
-        cursor: pointer;
-        cursor: hand;
-    }
 }
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
 .slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick-slider .slick-list
+{
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -39,62 +47,159 @@
     transform: translate3d(0, 0, 0);
 }
 
-.slick-track {
+.slick-track
+{
     position: relative;
-    left: 0;
     top: 0;
+    left: 0;
+
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
-
-    .slick-loading & {
-        visibility: hidden;
-    }
 }
-.slick-slide {
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
     float: left;
+
     height: 100%;
     min-height: 1px;
-    [dir="rtl"] & {
-        float: right;
-    }
-    img {
-        display: block;
-    }
-    &.slick-loading img {
-        display: none;
-    }
-
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
     display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
 
-    &.dragging img {
-        pointer-events: none;
-    }
+    height: auto;
 
-    .slick-initialized & {
-        display: block;
-    }
-
-    .slick-loading & {
-        visibility: hidden;
-    }
-
-    .slick-vertical & {
-        display: block;
-        height: auto;
-        border: 1px solid transparent;
-    }
+    border: 1px solid transparent;
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.reviews__slider{
+    display: flex;
+    flex-direction: column;
+
+}
+//.slick-prev,
+//.slick-next {
+//    position: relative;
+//    font-size: 0;
+//    border: none;
+//    background: none;
+//    outline: none;
+//    width: 130px;
+//    height: 52px;
+//    align-self: flex-end;
+//    &:before{
+//        position: absolute;
+//        content: "";
+//        transform: translate(-50%, -50%);
+//    }
+//}
+//
+//.slick-next{
+//    &:before{
+//        @include png-sprite($icon-arrow-slider);
+//    }
+//}
+//
+//.slick-prev{
+//    order: 1;
+//    &:before{
+//        @include png-sprite($icon-arrow-slider);
+//        transform: translate(-50%, -50%) rotate(180deg);
+//    }
+//
+//}
+
+
+.slick-prev,
+.slick-next{
+    position: absolute;
+    content: "";
+    right: 0;
+    font-size: 0;
+    width: 50px;
+    height: 26px;
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    &:active{
+        opacity: 0.3;
+        transition: 0s;
+    }
+}
+
+.slick-prev{
+    bottom: 0;
+    right: 100px;
+    @include png-sprite($icon-arrow-slider);
+    transform: rotate(180deg);
+    z-index: 2;
+
+    @media (max-width: 767px){
+        left: 42px;
+        bottom: -15%;
+    }
+}
+
+.slick-next{
+    right: 20px;
+    bottom: 0;
+    @include png-sprite($icon-arrow-slider);
+
+    @media (max-width: 767px){
+        bottom: -15%;
+        right: 42px;
+    }
 }

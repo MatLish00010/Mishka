@@ -1,0 +1,141 @@
+.reviews {
+  position: relative;
+  background-color: #ffffff;
+
+  @include tablet{
+    background-image: url(../../images/big_img/reviews-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 350px auto;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("../../images/reviews-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px auto;
+    padding-top: 80px;
+    width: 100%;
+    padding-bottom: 160px;
+
+    @include tablet{
+      background-image: none;
+      padding-bottom: 130px;
+    }
+
+    @include mobile{
+      background-image: none;
+      padding-top: 0;
+      padding-bottom: 45px;
+      flex-direction: row;
+    }
+
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-product-bottom);
+      content: "";
+      bottom: 0;
+      width: 100%;
+
+      @include mobile{
+        @include png-sprite($icon-product-mobile);
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-family: "OpenSansBold", sans-serif;
+    font-size: 53px;
+    padding-bottom: 55px;
+    padding-left: 175px;
+
+    @include tablet{
+      padding-left: 0;
+    }
+
+    @include mobile{
+      font-size: 25px;
+      padding-left: 0;
+    }
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    font-family: "OpenSansRegular", sans-serif;
+    line-height: 30px;
+    padding-bottom: 50px;
+  }
+
+  &__slider {
+    width: 100%;
+    padding-left: 175px;
+
+    @include tablet{
+      padding-left: 0;
+
+      br{
+        display: none;
+      }
+    }
+
+    @include mobile{
+      padding-left: 0;
+
+      br{
+        display: none;
+      }
+    }
+  }
+
+  &__author {
+    font-size: 17px;
+    font-family: "OpenSansBold", sans-serif;
+    padding-bottom: 15px;
+
+  }
+
+  &__social-link {
+    font-size: 17px;
+    font-family: "OpenSansRegular", sans-serif;
+
+  }
+
+  &__form {
+    order: -1;
+
+    @include mobile{
+      order: 1;
+      padding-top: 126px;
+    }
+  }
+
+  &__btn {
+    padding: 18px 39px;
+    font-size: 17px;
+    font-family: "OpenSansBold", sans-serif;
+    background: #ffffff;
+    border: 2px solid #444444;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @include mobile {
+      padding: 16px 84px;
+    }
+
+    @include mobile{
+      padding: 17px 80px;
+    }
+  }
+}

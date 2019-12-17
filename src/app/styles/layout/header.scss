@@ -128,6 +128,7 @@
         left: 40px;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
 
         @include tablet {
           transform: translate(-51%, -50%);
@@ -137,6 +138,7 @@
       @include tablet {
         & a {
           font-size: 0;
+          padding-bottom: 30px;
         }
         border-left: 2px #ececec solid;
         border-right: 2px #ececec solid;

@@ -1,0 +1,102 @@
+.footer {
+  background-color: #f1f1f1;
+
+  &__wrap {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__block {
+    width: 100%;
+
+    &--logo {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 27px;
+      display: flex;
+      justify-content: center;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--social {
+      @include mobile {
+        border-bottom: 2px #ececec solid;
+      }
+    }
+  }
+}
+
+.name {
+  @include png-sprite($icon-logo-footer);
+}
+
+.social-list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 23px 0 17px;
+
+  &__item {
+    text-align: center;
+    width: 60px;
+  }
+
+  &__link {
+    padding: 20px;
+
+    &--vk {
+      position: relative;
+
+      &:before {
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        position: absolute;
+        @include png-sprite($icon-insta);
+      }
+    }
+
+    &--inst {
+      position: relative;
+
+      &:before {
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        position: absolute;
+        @include png-sprite($icon-fb);
+      }
+    }
+
+    &--fb {
+      position: relative;
+
+      &:before {
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        position: absolute;
+        @include png-sprite($icon-twitter);
+      }
+    }
+  }
+}
+
+.footer__block--god {
+  display: flex;
+  justify-content: center;
+}
+
+.god__name {
+  color: #111111;
+  font-weight: 400;
+}

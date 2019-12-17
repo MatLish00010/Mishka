@@ -1,11 +1,11 @@
 .product-index {
   margin-top: 50px;
 }
+
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   position: relative;
 
   @include tablet {
@@ -29,7 +29,6 @@
 
     @include desktop {
       flex-direction: row-reverse;
-
       margin-top: 30px;
     }
 
@@ -43,7 +42,6 @@
       @include desktop {
         flex: 2;
         margin-left: 130px;
-
         font-size: 55px;
       }
     }
@@ -145,7 +143,6 @@
       }
     }
   }
-
 
   &__img {
     @include mobile {

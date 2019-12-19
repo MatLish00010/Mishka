@@ -122,38 +122,6 @@
     flex-direction: column;
 
 }
-//.slick-prev,
-//.slick-next {
-//    position: relative;
-//    font-size: 0;
-//    border: none;
-//    background: none;
-//    outline: none;
-//    width: 130px;
-//    height: 52px;
-//    align-self: flex-end;
-//    &:before{
-//        position: absolute;
-//        content: "";
-//        transform: translate(-50%, -50%);
-//    }
-//}
-//
-//.slick-next{
-//    &:before{
-//        @include png-sprite($icon-arrow-slider);
-//    }
-//}
-//
-//.slick-prev{
-//    order: 1;
-//    &:before{
-//        @include png-sprite($icon-arrow-slider);
-//        transform: translate(-50%, -50%) rotate(180deg);
-//    }
-//
-//}
-
 
 .slick-prev,
 .slick-next{

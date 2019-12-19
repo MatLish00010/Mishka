@@ -1,11 +1,21 @@
 .reviews {
   position: relative;
   background-color: #ffffff;
+  margin-bottom: 30px;
 
-  @include tablet{
-    background-image: url(../../images/big_img/reviews-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: 350px auto;
+  &:after {
+    position: absolute;
+    @include png-sprite($icon-product-bottom);
+    content: "";
+    bottom: 0;
+    width: 100%;
+
+    @include mobile{
+      @include png-sprite($icon-product-mobile);
+    }
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -22,8 +32,11 @@
     padding-bottom: 160px;
 
     @include tablet{
-      background-image: none;
       padding-bottom: 130px;
+      padding-left: 20px;
+      background-image: url(../../images/big_img/reviews-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: 350px auto;
     }
 
     @include mobile{
@@ -31,21 +44,6 @@
       padding-top: 0;
       padding-bottom: 45px;
       flex-direction: row;
-    }
-
-    &:after {
-      position: absolute;
-      @include png-sprite($icon-product-bottom);
-      content: "";
-      bottom: 0;
-      width: 100%;
-
-      @include mobile{
-        @include png-sprite($icon-product-mobile);
-      }
-      @include mobile {
-        width: 100%;
-      }
     }
   }
 

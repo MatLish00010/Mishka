@@ -77,7 +77,6 @@
       display: block;
       padding: 12px 21px 10px;
       font-size: 18px;
-      background-color: #ffffff;
       border-bottom: 2px #ececec solid;
       font-weight: bold;
 
@@ -207,7 +206,9 @@
         justify-content: space-between;
       }
 
-      &__wrap {}
+      &__wrap {
+        background-color: #fafafa;
+      }
     }
 
     &__toggle {

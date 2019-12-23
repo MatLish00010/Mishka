@@ -14,11 +14,14 @@
 @import "../fonts/fonts";
 @import "layout/global";
 @import "layout/header";
+@import "layout/footer";
+
 @import "blocks/hero";
 @import "blocks/product";
 @import "blocks/info";
 @import "blocks/reviews";
-@import "layout/footer";
+@import "blocks/map";
+
 
 @import "libraries/slick";
 

@@ -1,7 +1,13 @@
 .cooperation {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+
   &--index {
     background-color: #fff;
+  }
+
+  &__form {
+    margin-top: 40px;
+    text-align: center;
   }
 
   &__inner {
@@ -66,6 +72,8 @@
   }
 
   &__map {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-size: 320px 360px;
   }
@@ -145,6 +153,7 @@
 
     &__address {
       margin-right: 0;
+
       address {
         width: 300px;
       }
@@ -162,6 +171,7 @@
 
     &__title {
       padding-left: 80px;
+
       &:after {
         left: 0;
       }
@@ -169,7 +179,7 @@
 
     &__inner {
       &-desktop {
-        padding: 0 60px 0 70px;
+        padding: 5px 60px 5px 70px;
         position: absolute;
         z-index: 1;
         display: flex;

@@ -1,29 +1,60 @@
 .cooperation {
+  margin-bottom: 100px;
   &--index {
     background-color: #fff;
   }
 
   &__inner {
-    padding-top: 28px;
-    padding-bottom: 26px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 400px;
   }
 
   &__title {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: bold;
     text-transform: uppercase;
     color: #111111;
-    width: 40%;
     margin: 0;
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__mail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      border-bottom: 2px #62d1ba solid;
+    }
+  }
+
   &__address {
+    display: flex;
+    justify-content: space-between;
     font-family: "Arial", sans-serif;
     line-height: 20px;
-    width: 50%;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+    }
+
+    address {
+      max-width: 190px;
+    }
   }
 
   &__street {
@@ -44,24 +75,50 @@
   }
 }
 
-@include tablet{
+@include tablet {
   .cooperation {
+
     &__inner {
       padding: 63px 41px 59px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__mail {
+      height: 25px;
+      margin-top: 0;
+    }
+
+    &__info {
+      margin-top: 55px;
+      justify-content: space-between;
     }
 
     &__title {
-      width: 160px;
-      font-size: 20px;
+      font-size: 43px;
       line-height: 25px;
+      text-transform: none;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        @include png-sprite($icon-flag);
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__info {
+      flex-direction: row;
     }
 
     &__address {
-      width: 200px;
-      text-align: right;
+      margin-right: 40px;
 
-      &-street {
-        font-size: 18px;
+      address {
+        max-width: 200px;
       }
     }
 
@@ -74,7 +131,7 @@
 @include desktop {
   .cooperation {
     position: relative;
-    background-color: #f1f1f1;
+    margin-bottom: 100px;
 
     &__inner {
       display: none;
@@ -86,22 +143,41 @@
       }
     }
 
+    &__address {
+      margin-right: 0;
+      address {
+        width: 300px;
+      }
+    }
+
     &__map {
       display: none;
     }
 
+    &__info {
+      flex-direction: column;
+      padding-left: 80px;
+      width: 350px;
+    }
+
+    &__title {
+      padding-left: 80px;
+      &:after {
+        left: 0;
+      }
+    }
+
     &__inner {
       &-desktop {
+        padding: 0 60px 0 70px;
         position: absolute;
         z-index: 1;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
+        min-width: 300px;
+        height: 100%;
         background-color: #fff;
-        width: 540px;
-        padding: 20px 35px;
-        left: 150px;
-        top: 50%;
-        transform: translateY(-50%);
       }
     }
   }

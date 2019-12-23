@@ -3,21 +3,6 @@
   background-color: #ffffff;
   margin-bottom: 30px;
 
-  &:after {
-    position: absolute;
-    @include png-sprite($icon-product-bottom);
-    content: "";
-    bottom: 0;
-    width: 100%;
-
-    @include mobile{
-      @include png-sprite($icon-product-mobile);
-    }
-    @include mobile {
-      width: 100%;
-    }
-  }
-
   &__wrapper {
     position: relative;
     display: flex;

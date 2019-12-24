@@ -138,10 +138,6 @@
     padding: 17px;
     outline: none;
 
-    &:hover {
-      border: none;
-    }
-
     @include mobile {
       width: 260px;
     }

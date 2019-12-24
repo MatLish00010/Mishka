@@ -1,0 +1,126 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+  box-sizing: border-box;
+  width: 564px;
+  height: 334px;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 #c7c7c7;
+  display: none;
+
+  @include mobile {
+    width: 320px;
+  }
+
+  & h2 {
+    font-size: 30px;
+    font-family: "OpenSansBold", sans-serif;
+    text-transform: uppercase;
+    align-self: center;
+
+    @include mobile {
+      width: 180px;
+    }
+  }
+
+  & p {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 18px;
+    color: #000;
+    align-self: center;
+  }
+
+  &__show {
+    display: block;
+    animation: bounce .5s;
+  }
+
+  &__wrp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: inherit;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  &__close {
+    position: absolute;
+    font-size: 0;
+    top: 18px;
+    right: 9px;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    border: none;
+    opacity: 0;
+  }
+
+  &__choice {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @include mobile {
+      width: 260px;
+    }
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__label {
+    font-family: "OpenSansBold", sans-serif;
+    font-size: 18px;
+    width: 108px;
+    height: 48px;
+    border: 2px solid #ececec;
+    color: #444444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 16px;
+    font-weight: 700;
+
+    @include mobile {
+      width: 70px;
+    }
+  }
+
+  &__radio:checked + &__label {
+    border-color: #63d1bb;
+  }
+
+  &__button {
+    position: relative;
+    width: 350px;
+    border: none;
+    cursor: pointer;
+    background-color: #63d1bb;
+    color: white;
+    line-height: 16px;
+    padding: 17px;
+    outline: none;
+
+    &:hover {
+      border: none;
+    }
+
+    @include mobile {
+      width: 260px;
+    }
+  }
+}

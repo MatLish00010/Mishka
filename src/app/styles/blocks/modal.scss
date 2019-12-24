@@ -67,6 +67,29 @@
     opacity: 0;
   }
 
+  &__close:hover {
+    opacity: 1;
+  }
+
+  &__close:active {
+    opacity: 0.1;
+  }
+
+  &__overlay {
+    position: fixed;
+    z-index: 45;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+  }
+
+  &__overlay-shadow {
+    display: block;
+  }
+
   &__choice {
     display: flex;
     width: 350px;
@@ -124,3 +147,4 @@
     }
   }
 }
+

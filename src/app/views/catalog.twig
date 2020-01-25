@@ -1,0 +1,9 @@
+{% extends 'layout/base.twig' %}
+{% block title %}catalog{% endblock %}
+{% block main %}
+    {% include 'components/hero.twig' with
+        {
+            'mod' : 'catalog',
+            'section_title' : 'Каталог товаров',
+        } %}
+{% endblock %}

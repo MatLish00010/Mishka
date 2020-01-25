@@ -3,24 +3,26 @@
         <div class="header-nav header-nav--main">
             <div class="container">
                 <div class="header-nav header-nav--mobile">
-                    {% include '../components/img.twig' with {
-                        'title': 'Mishka-logo',
-                        'img_class' : 'header__logo-mobile',
-                        'src' : '/images/iconic/mishka-logo-mobile.png',
-                    } %}
+                    <a href="/">
+                        {% include '../components/img.twig' with {
+                            'title': 'Mishka-logo',
+                            'img_class' : 'header__logo-mobile',
+                            'src' : '/images/iconic/mishka-logo-mobile.png',
+                        } %}
+                    </a>
                     <button class="header-nav__toggle header-nav__toggle" type="button">
                         <span class="visually-hidden">Открыть меню</span>
                     </button>
                 </div>
                 <ul class="header__list header__list--closed">
                     <li class="header__title header__title--catalog">
-                        <a href="#">Каталог товаров</a>
+                        <a href="catalog.html">Каталог товаров</a>
                     </li>
                     <li class="header__title header__title--order">
                         <a href="#">Вязание на заказ</a>
                     </li>
                     <li class="header__title header__title--logo">
-                        <a href="#">{% include '../components/img.twig' with {
+                        <a href="/">{% include '../components/img.twig' with {
                                 'title': 'Mishka-logo',
                                 'img_class' : 'header__logo',
                                 'tablet_src' : '/images/iconic/mishka-logo-tablet.png',

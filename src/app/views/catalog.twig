@@ -6,4 +6,56 @@
             'mod' : 'catalog',
             'section_title' : 'Каталог товаров',
         } %}
+
+
+    {% include 'components/catalog-list.twig'  with
+        {
+            'list' : [
+            {
+                'class' : 'catalog-list__img',
+                'title' : 'mishka',
+                'tablet_src' : '../images/big_img/catalog-item1.jpg',
+                'mobile_src' : '../images/big_img/catalog-item1.jpg',
+                'src' : '../images/big_img/catalog-item1.jpg',
+                'responsive' : 'true',
+                'main_title' : 'Text1',
+                'link': '#',
+                'title_volume': 'text2',
+                'volume' : 'text3',
+                'title_price' : 'text4',
+                'price': 'text5'
+
+            },
+            {
+                'class' : 'catalog-list__img',
+                'title' : 'mishka',
+                'tablet_src' : '../images/big_img/catalog-item2.jpg',
+                'mobile_src' : '../images/big_img/catalog-item2.jpg',
+                'src' : '../images/big_img/catalog-item2.jpg',
+                'responsive' : 'true',
+                'main_title' : 'Text1',
+                'link': '#',
+                'title_volume': 'text2',
+                'volume' : 'text3',
+                'title_price' : 'text4',
+                'price': 'text5'
+
+            },
+            {
+                'class' : 'catalog-list__img',
+                'title' : 'mishka',
+                'tablet_src' : '../images/big_img/catalog-item3.jpg',
+                'mobile_src' : '../images/big_img/catalog-item3.jpg',
+                'src' : '../images/big_img/catalog-item3.jpg',
+                'responsive' : 'true',
+                'main_title' : 'Text1',
+                'link': '#',
+                'title_volume': 'text2',
+                'volume' : 'text3',
+                'title_price' : 'text4',
+                'price': 'text5'
+
+            },
+        ]
+        } %}
 {% endblock %}

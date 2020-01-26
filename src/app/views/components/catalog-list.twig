@@ -1,5 +1,6 @@
 <section class="catalog-list container">
-        {% for item in list %}
+    {% for item in list %}
+        <a href="{{ item.link }}" class="catalog-list__link">
             <li class="catalog-list__item {{ item.class_all }}">
                 {% include 'img.twig' with
                     {
@@ -8,21 +9,12 @@
                         'src' : item.src,
                         'responsive' : true,
                     } %}
-                <div class="catalog-list__wrap-description {{ item.wrap_description }}">
-                    <h5 class="{{ item.product_all }} {{ item.last_title }}">{{ item.main_title }}</h5>
-                    <p class="{{ item.description_class }}">{{ item.description }}</p>
-                    <table class="catalog-list__table">
-                        <tr class="catalog-list__table-row">
-                            <td class="catalog-list__table-column">{{ item.title_volume }}</td>
-                            <td class="catalog-list__table-column">{{ item.value }}</td>
-                        </tr>
-
-                        <tr class="catalog-list__table-row">
-                            <td class="catalog-list__table-column">{{ item.title_price }}</td>
-                            <td class="catalog-list__table-column">{{ item.price }}</td>
-                        </tr>
-                    </table>
+                <div class="catalog-list__info {{ item.info }}">
+                    <h2 class="catalog-list__title">{{item.title}}</h2>
+                    <p class="catalog-list__description">{{ item.description }}</p>
+                    <p class="catalog-list__price">{{ item.price }}</p>
                 </div>
             </li>
-        {% endfor %}
+        </a>
+    {% endfor %}
 </section>

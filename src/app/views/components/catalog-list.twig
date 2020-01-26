@@ -1,5 +1,4 @@
-<section class="catalog-list">
-    <div class="container">
+<section class="catalog-list container">
         {% for item in list %}
             <li class="catalog-list__item {{ item.class_all }}">
                 {% include 'img.twig' with
@@ -26,5 +25,4 @@
                 </div>
             </li>
         {% endfor %}
-    </div>
 </section>

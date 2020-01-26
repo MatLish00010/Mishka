@@ -17,19 +17,7 @@
 
   &--index {
     background-color: #fafafa;
-  }
-
-  &--catalog {
-    background-color: #f1f1f1;
-  }
-
-  &__wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-
-    &--index {
+    & .hero__wrap {
       background: url(../../images/big_img/hero-mobile.jpg) no-repeat top;
       min-height: 480px;
 
@@ -38,6 +26,30 @@
         min-height: 600px;
       }
     }
+
+    & .hero__categories {
+      margin-right: -20px;
+      margin-left: -20px;
+
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &--catalog {
+    background-color: #f1f1f1;
+    & .hero__categories {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
   }
 
   &__heading {
@@ -48,22 +60,6 @@
         font-size: 51px;
         line-height: 60px;
       }
-    }
-  }
-
-  &__categories {
-    &--index {
-      margin-right: -20px;
-      margin-left: -20px;
-
-      @include tablet {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
-    &--catalog {
-      display: none;
     }
   }
 

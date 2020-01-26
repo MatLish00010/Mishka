@@ -5,8 +5,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 80px;
-  position: relative;
-  background: #ffffff;
 
   @include desktop {
     flex-direction: row;
@@ -18,7 +16,7 @@
       width: 100%;
     }
     @include desktop {
-      width: 28%;
+      width: 30%;
     }
   }
 
@@ -27,7 +25,7 @@
   }
 
   &__item {
-    margin: 0 20px 40px 0;
+    margin-top: 20px;
     cursor: pointer;
     @include tablet {
       display: flex;
@@ -35,7 +33,6 @@
       margin-bottom: 54px;
     }
     @include desktop {
-      flex: 0 0 30%;
       flex-flow: column nowrap;
     }
   }
@@ -65,12 +62,6 @@
         font-size: 20px;
       }
     }
-  }
-
-  &__description {
-    margin-top: 0;
-    margin-bottom: 5px;
-    position: relative;
   }
 
   &__price {

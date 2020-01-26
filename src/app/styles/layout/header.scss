@@ -23,11 +23,11 @@
       margin-right: -20px;
 
 
-      &--minor {
+      &--sub {
         justify-content: start;
       }
 
-      &--minor, &--info {
+      &--sub, &--info {
         border: none;
       }
     }
@@ -37,7 +37,7 @@
       margin-right: 0;
     }
 
-    &--minor {
+    &--sub {
       border: none;
 
       & .header__title--catalog, & .header__title--order {
@@ -197,7 +197,7 @@
       }
     }
 
-    &--minor {
+    &--sub {
       @include mobile {
         display: none;
       }

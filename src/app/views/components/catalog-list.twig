@@ -1,10 +1,12 @@
 <section class="catalog-list container">
     {% for item in list %}
         <a href="{{ item.link }}" class="catalog-list__link">
-            <li class="catalog-list__item {{ item.class_all }}">
+            <li class="catalog-list__item">
                 {% include 'img.twig' with
                     {
                         'class' : item.class,
+                        'mobile_src' : item.mobile_src,
+                        'tablet_src' : item.tablet_src,
                         'title' : item.title,
                         'src' : item.src,
                         'responsive' : true,

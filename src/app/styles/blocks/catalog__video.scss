@@ -1,0 +1,84 @@
+.catalog__video {
+  width: 100%;
+  height: 455px;
+  padding-bottom: 105px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @include tablet {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: 668px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  &-description {
+    border: 1px solid #e7e7e7;
+    padding: 0 28px 30px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      padding: 0 41px;
+      padding-bottom: 45px;
+      border-top: none;
+    }
+
+    @include desktop {
+      padding: 0 56px 0 80px;
+    }
+
+    h4 {
+      position: relative;
+      font-size: 17px;
+      padding-top: 28px;
+      padding-bottom: 210px;
+      top: 33px;
+      left: 6px;
+
+      &:before {
+        position: absolute;
+        @include png-sprite($icon-camera);
+        content: "";
+        top: 46px;
+      }
+
+      @include desktop {
+        font-size: 20px;
+        padding-top: 100px;
+        padding-bottom: 43px;
+      }
+    }
+
+    p {
+      font-size: 13px;
+      width: 220px;
+      padding-bottom: 30px;
+      line-height: 30px;
+
+      @include desktop {
+        font-size: 15px;
+        padding-bottom: 51px;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 15px 24px;
+
+    @include tablet {
+      width: 100%;
+    }
+    @include desktop {
+      padding: 15px 42px 15px 52px;
+    }
+
+  }
+
+}

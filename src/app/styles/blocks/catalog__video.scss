@@ -1,5 +1,7 @@
 .catalog {
   &__video {
+    margin-top: 40px;
+    align-items: center;
     height: 455px;
     padding-bottom: 105px;
     display: flex;
@@ -20,6 +22,7 @@
 
     &-description {
       border: 1px solid #e7e7e7;
+      padding: 0 28px 0 28px;
       display: flex;
       flex-direction: column;
 
@@ -39,8 +42,8 @@
       h4 {
         position: relative;
         font-size: 17px;
-        padding-top: 28px;
-        padding-bottom: 210px;
+        padding-bottom: 250px;
+        padding-left: 50px;
         top: 33px;
         left: 0;
         margin: 0;
@@ -48,25 +51,29 @@
         @include tablet {
           padding-top: 100px;
           padding-bottom: 43px;
+          padding-left: 0;
         }
 
         &:before {
           position: absolute;
           @include png-sprite($icon-camera);
           content: "";
-          top: 46px;
+          left: 6px;
+          @include tablet {
+            top: 20px;
+          }
         }
 
         @include desktop {
           font-size: 20px;
-          padding-top: 100px;
-          //padding-bottom: 43px;
+          padding-top: 66px;
+          padding-bottom: 80px;
         }
       }
 
       p {
         font-size: 13px;
-        width: 220px;
+        width: 100%;
         padding-bottom: 30px;
         line-height: 30px;
         margin: 0;
@@ -84,10 +91,9 @@
 
   &__btn {
     padding: 15px 24px;
+    width: 100%;
+    margin-bottom: 20px;
 
-    @include tablet {
-      width: 100%;
-    }
     @include desktop {
       width: 80%;
       padding: 15px 42px 15px 52px;
@@ -97,10 +103,18 @@
 }
 
 .video-youtube {
-  position: relative;
-  width: 682px;
-  height: 455px;
+  position: absolute;
+  width: 260px;
+  height: 150px;
+  margin-top: 95px;
   background: url("../../images/big_img/bg-play.jpg") no-repeat;
+  @include tablet {
+    position: relative;
+    width: 682px;
+    height: 455px;
+    background: url("../../images/big_img/bg-play.jpg") no-repeat;
+    margin-top: 0;
+  }
 }
 
 .video-youtube__overlay:before {

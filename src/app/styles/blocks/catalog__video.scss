@@ -10,6 +10,7 @@
       height: auto;
       align-items: center;
       width: 668px;
+      margin: 0 auto;
     }
 
     @include desktop {
@@ -19,19 +20,19 @@
 
     &-description {
       border: 1px solid #e7e7e7;
-      padding: 0 56px 0 80px;
-      flex: 1;
       display: flex;
       flex-direction: column;
+
       @include tablet {
         padding: 0 41px;
         padding-bottom: 45px;
         border-top: none;
+        width: 90%;
       }
 
       @include desktop {
         border-top: 1px solid #e7e7e7;
-        padding: 0 56px 0 80px;
+        padding: 30px 56px 30px 80px;
         flex: 1;
       }
 
@@ -44,6 +45,11 @@
         left: 0;
         margin: 0;
 
+        @include tablet {
+          padding-top: 100px;
+          padding-bottom: 43px;
+        }
+
         &:before {
           position: absolute;
           @include png-sprite($icon-camera);
@@ -54,7 +60,7 @@
         @include desktop {
           font-size: 20px;
           padding-top: 100px;
-          padding-bottom: 43px;
+          //padding-bottom: 43px;
         }
       }
 
@@ -64,9 +70,13 @@
         padding-bottom: 30px;
         line-height: 30px;
         margin: 0;
+
+        @include tablet {
+          width: 100%;
+          padding-bottom: 51px;
+        }
         @include desktop {
           font-size: 15px;
-          padding-bottom: 51px;
         }
       }
     }
@@ -110,6 +120,7 @@
   height: 10000%;
   transform: scale(0.01);
   transform-origin: top left;
+  display: block;
 }
 
 .video-youtube__new-play-btn {

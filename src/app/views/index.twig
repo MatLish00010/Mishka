@@ -1,49 +1,56 @@
 {% extends 'layout/base.twig' %}
 {% block title %}mishka.by{% endblock %}
 {% block main %}
-    {% include 'components/hero.twig'  with
+    {% include 'layout/header.twig' with
         {
             'mod' : 'index',
-            'section_title' : 'Милые штуки ручной <br> работы для дома',
+        },
+    %}
+    <main>
+        {% include 'components/hero.twig'  with
+            {
+                'mod' : 'index',
+                'section_title' : 'Милые штуки ручной <br> работы для дома',
+            } %}
+        {% include 'components/product.twig' with {
+            'title' : 'Вязаные корзинки',
+            'description' : 'Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах',
+            'color' : 'Тифанни/серый',
+            'diameter' : '25 см',
+            'height' : '15 см',
+            'cost' : '990 руб.'
         } %}
-    {% include 'components/product.twig' with {
-        'title' : 'Вязаные корзинки',
-        'description' : 'Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах',
-        'color' : 'Тифанни/серый',
-        'diameter' : '25 см',
-        'height' : '15 см',
-        'cost' : '990 руб.'
-    } %}
-    {% include 'components/info.twig' with {
-        'title' : 'Коротко о нас:',
-        'info' :
-        [
-            {
-                'img_url' : '/images/png_icon/icon-1.png',
-                'description' : 'Экологически чистые материалы',
-            },
-            {
-                'img_url' : '/images/png_icon/icon-2.png',
-                'description' : 'Скандинавский стиль по российсокй цене',
-            },
-            {
-                'img_url' : '/images/png_icon/icon-3.png',
-                'description' : 'Увеличивает лайки на фотграфиях',
-            },
-            {
-                'img_url' : '/images/png_icon/icon-4.png',
-                'description' : 'Связано вручную с любовью и умилением',
-            },
-            {
-                'img_url' : '/images/png_icon/icon-5.png',
-                'description' : 'Поддержка  отечественного производителя',
-            },
-            {
-                'img_url' : '/images/png_icon/icon-6.png',
-                'description' : 'Поставляется в подарочной упаковке',
-            },
-        ]
-    } %}
-    {% include 'components/reviews.twig' %}
-    {% include 'components/map.twig' %}
+        {% include 'components/info.twig' with {
+            'title' : 'Коротко о нас:',
+            'info' :
+            [
+                {
+                    'img_url' : '/images/png_icon/icon-1.png',
+                    'description' : 'Экологически чистые материалы',
+                },
+                {
+                    'img_url' : '/images/png_icon/icon-2.png',
+                    'description' : 'Скандинавский стиль по российсокй цене',
+                },
+                {
+                    'img_url' : '/images/png_icon/icon-3.png',
+                    'description' : 'Увеличивает лайки на фотграфиях',
+                },
+                {
+                    'img_url' : '/images/png_icon/icon-4.png',
+                    'description' : 'Связано вручную с любовью и умилением',
+                },
+                {
+                    'img_url' : '/images/png_icon/icon-5.png',
+                    'description' : 'Поддержка  отечественного производителя',
+                },
+                {
+                    'img_url' : '/images/png_icon/icon-6.png',
+                    'description' : 'Поставляется в подарочной упаковке',
+                },
+            ]
+        } %}
+        {% include 'components/reviews.twig' %}
+        {% include 'components/map.twig' %}
+    </main>
 {% endblock %}

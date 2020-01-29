@@ -1,6 +1,11 @@
 {% extends 'layout/base.twig' %}
 {% block title %}catalog{% endblock %}
 {% block main %}
+    {% include 'layout/header.twig' with
+        {
+            'mod' : 'catalog',
+        },
+    %}
     {% include 'components/hero.twig' with
         {
             'mod' : 'catalog',

@@ -23,11 +23,11 @@
       margin-right: -20px;
 
 
-      &--sub {
+      &-sub {
         justify-content: start;
       }
 
-      &--sub, &--info {
+      &-sub, &--info {
         border: none;
       }
     }
@@ -37,7 +37,7 @@
       margin-right: 0;
     }
 
-    &--sub {
+    &-sub {
       border: none;
 
       & .header__title--catalog, & .header__title--order {
@@ -181,7 +181,7 @@
     }
   }
 
-  &-nav {
+  &__nav {
     &--main {
       border-bottom: 2px #ececec solid;
     }
@@ -197,7 +197,7 @@
       }
     }
 
-    &--sub {
+    &-sub {
       @include mobile {
         display: none;
       }
@@ -208,27 +208,35 @@
 
       &__wrap {
         background-color: #fafafa;
+
         &--catalog {
           background-color: #f1f1f1;
         }
       }
-    }
-
-    &__toggle {
-      position: absolute;
-      right: 0;
-      top: 9px;
-      transform: translateX(-100%);
-      margin: 0;
-      border-radius: 0;
-      font-size: 0;
-      cursor: pointer;
-      @include png-sprite($icon-menu);
-      border: none;
-
-      &--cross {
-        @include png-sprite($icon-menu-close);
+      &--index {
+        background-color: #fafafa;
       }
+
+      &--catalog {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 0;
+    top: 9px;
+    transform: translateX(-100%);
+    margin: 0;
+    border-radius: 0;
+    font-size: 0;
+    cursor: pointer;
+    @include png-sprite($icon-menu);
+    border: none;
+
+    &--cross {
+      @include png-sprite($icon-menu-close);
     }
   }
 }

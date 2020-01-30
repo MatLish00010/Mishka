@@ -1,0 +1,16 @@
+{% extends 'layout/base.twig' %}
+{% block title %}catalog{% endblock %}
+{% block body %}
+    {% include 'layout/header.twig' with
+        {
+            'mod' : 'catalog',
+        }, %}
+    {% include 'components/hero.twig' with
+        {
+            'mod' : 'catalog',
+            'section_title' : 'Вязание на заказ',
+        } %}
+{% include 'components/form.twig' %}
+
+
+{% endblock %}

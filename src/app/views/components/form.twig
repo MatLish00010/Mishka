@@ -1,0 +1,175 @@
+<section class="form">
+    <form action="#" method="post">
+        <div class="container">
+            <div class="form__wrap">
+                {% include '../components/title-description.twig' with
+                    {
+                        'item_description' : 'Мы будем рады воплотить в жизнь ваши пожелания!
+					Заполните простую форму заказа и мы свяжемся с вами,
+					чтобы уточнить детали.',
+                    } %}
+                <div class="form__program-selection">
+                    <h3 class="form__name">Тип</h3>
+                    {% include 'radio.twig' with
+                        {
+                            'title' : 'Аксессуар для интурьера',
+                            'class' : 'radio',
+                            'type' : 'radio',
+                            'name' : 'radio',
+                            'requierd' : '#',
+                        } %}
+                    {% include 'radio.twig' with
+                        {
+                            'title' : 'Детская игрушка',
+                            'class' : 'radio',
+                            'type' : 'radio',
+                            'name' : 'radio',
+                            'requierd' : '#',
+                        } %}
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="#" method="post">
+        <div class="form__name">
+            <div class="container">
+                <h3 class="form__program-name">Цвет</h3>
+                {% include "../components/checkbox.twig" with
+                    {
+                        'title' : 'Белый',
+                        'class' : 'checkbox',
+                        'class_label' : 'label__checkbox',
+                        'type' : 'checkbox',
+                        'name' : 'checkbox',
+                    } %}
+                {% include "../components/checkbox.twig" with
+                    {
+                        'title' : 'Серый',
+                        'class' : 'checkbox',
+                        'class_label' : 'label__checkbox',
+                        'type' : 'checkbox',
+                        'name' : 'checkbox',
+                    } %}
+                {% include "../components/checkbox.twig" with
+                    {
+                        'title' : 'Тиффани',
+                        'class' : 'checkbox',
+                        'class_label' : 'label__checkbox',
+                        'type' : 'checkbox',
+                        'name' : 'checkbox',
+                    } %}
+                {% include "../components/checkbox.twig" with
+                    {
+                        'title' : 'Черный',
+                        'class' : 'checkbox',
+                        'class_label' : 'label__checkbox',
+                        'type' : 'checkbox',
+                        'name' : 'checkbox',
+                    } %}
+                {% include "../components/checkbox.twig" with
+                    {
+                        'title' : 'Розовый',
+                        'class' : 'checkbox',
+                        'class_label' : 'label__checkbox',
+                        'type' : 'checkbox',
+                        'name' : 'checkbox',
+                    } %}
+                {% include "../components/checkbox.twig" with
+                    {
+                        'title' : 'Оранжевый',
+                        'class' : 'checkbox',
+                        'class_label' : 'label__checkbox',
+                        'type' : 'checkbox',
+                        'name' : 'checkbox',
+                    } %}
+            </div>
+        </div>
+
+    </form>
+    <form action="#" method="post">
+        <div class="form__object">
+            <div class="container">
+                <h3 class="form__name">ФИО</h3>
+                {% include '../components/input.twig' with
+                    {
+                        'title' : 'Имя:',
+                        'class' : 'input--name',
+                        'type' : 'text',
+                        'placeholder' : 'Ввeдите ваше имя*',
+                        'name': 'name',
+                        'required' : '#',
+                    } %}
+                {% include '../components/input.twig' with
+                    {
+                        'title' : 'Фамилия:',
+                        'class' : 'input--name',
+                        'type' : 'text',
+                        'placeholder' : 'Укажите фамилию*',
+                        'name': 'name',
+                        'required' : '#',
+                    } %}
+                {% include '../components/input.twig' with
+                    {
+                        'title' : 'Отчество:',
+                        'class' : 'input--name',
+                        'type' : 'text',
+                        'placeholder' : 'Отчество, если желаете',
+                        'name': 'name',
+                        'required' : '#',
+                    } %}
+            </div>
+        </div>
+    </form>
+    <form action="#" method="post">
+        <div class="form__email">
+            <div class="container">
+                <h3 class="form__name">e-mai</h3>
+                {% include '../components/input-email.twig' with
+                    {
+                        'modifier' : 'label--email',
+                        'png_email': 'label--png-email',
+                        'modifier_email' : 'input--email',
+                        'title' : 'e-mail',
+                        'type' : 'e-mail',
+                        'name' : 'e-mail',
+                        'placeholder' : 'misha@doc.com',
+                        'required' : '#',
+                    } %}
+                <h3 class="form__name">тел</h3>
+                {% include '../components/input-email.twig' with
+                    {
+                        'modifier' : 'label--email',
+                        'png_email': 'label--png-tel',
+                        'modifier_email' : 'input--tel',
+                        'title' : 'телефон',
+                        'type' : 'tel',
+                        'name' : 'телефон',
+                        'placeholder' : '+375298496688',
+                        'required' : '#',
+                    } %}
+            </div>
+        </div>
+    </form>
+    <form action="#" method="post">
+        <div class="form__textarea">
+            <div class="container">
+                {% include '../components/textarea.twig' with
+                    {
+                        'description' : 'Опишите свои пожелания к заказу',
+                    } %}
+            </div>
+        </div>
+    </form>
+    <div class="form__wrap-submit">
+        {% include '../components/submit.twig' with
+            {
+                'title' : 'отправить заявку',
+            } %}
+        {% include '../components/important.twig' with
+            {
+                'title' : '*Поля обязательны для ззаполнения',
+            }
+        %}
+    </div>
+
+</section>

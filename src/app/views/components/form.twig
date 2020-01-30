@@ -14,7 +14,7 @@
                         {% include 'radio.twig' with
                             {
                                 'title' : 'Аксессуар для интерьера',
-                                'class' : 'form__radio',
+                                'class' : 'radio',
                                 'type' : 'radio',
                                 'name' : 'radio',
                                 'requierd' : '#',
@@ -22,7 +22,7 @@
                         {% include 'radio.twig' with
                             {
                                 'title' : 'Детская игрушка',
-                                'class' : 'form__radio',
+                                'class' : 'radio',
                                 'type' : 'radio',
                                 'name' : 'radio',
                                 'requierd' : '#',
@@ -32,58 +32,60 @@
             </div>
         </div>
     </form>
-    <form action="#" method="post">
-        <div class="form__name">
-            <div class="container">
+    <form class="form__name-background--gr" action="#" method="post">
+        <div class="container">
+            <div class="form__name">
                 <h3 class="form__title">Цвет</h3>
-                {% include "../components/checkbox.twig" with
-                    {
-                        'title' : 'Белый',
-                        'class' : 'checkbox',
-                        'class_label' : 'label__checkbox',
-                        'type' : 'checkbox',
-                        'name' : 'checkbox',
-                    } %}
-                {% include "../components/checkbox.twig" with
-                    {
-                        'title' : 'Серый',
-                        'class' : 'checkbox',
-                        'class_label' : 'label__checkbox',
-                        'type' : 'checkbox',
-                        'name' : 'checkbox',
-                    } %}
-                {% include "../components/checkbox.twig" with
-                    {
-                        'title' : 'Тиффани',
-                        'class' : 'checkbox',
-                        'class_label' : 'label__checkbox',
-                        'type' : 'checkbox',
-                        'name' : 'checkbox',
-                    } %}
-                {% include "../components/checkbox.twig" with
-                    {
-                        'title' : 'Черный',
-                        'class' : 'checkbox',
-                        'class_label' : 'label__checkbox',
-                        'type' : 'checkbox',
-                        'name' : 'checkbox',
-                    } %}
-                {% include "../components/checkbox.twig" with
-                    {
-                        'title' : 'Розовый',
-                        'class' : 'checkbox',
-                        'class_label' : 'label__checkbox',
-                        'type' : 'checkbox',
-                        'name' : 'checkbox',
-                    } %}
-                {% include "../components/checkbox.twig" with
-                    {
-                        'title' : 'Оранжевый',
-                        'class' : 'checkbox',
-                        'class_label' : 'label__checkbox',
-                        'type' : 'checkbox',
-                        'name' : 'checkbox',
-                    } %}
+                <div class="form__name--wrap">
+                    {% include "../components/checkbox.twig" with
+                        {
+                            'title' : 'Белый',
+                            'class' : 'checkbox',
+                            'class_label' : 'label__checkbox',
+                            'type' : 'checkbox',
+                            'name' : 'checkbox',
+                        } %}
+                    {% include "../components/checkbox.twig" with
+                        {
+                            'title' : 'Серый',
+                            'class' : 'checkbox',
+                            'class_label' : 'label__checkbox',
+                            'type' : 'checkbox',
+                            'name' : 'checkbox',
+                        } %}
+                    {% include "../components/checkbox.twig" with
+                        {
+                            'title' : 'Тиффани',
+                            'class' : 'checkbox',
+                            'class_label' : 'label__checkbox',
+                            'type' : 'checkbox',
+                            'name' : 'checkbox',
+                        } %}
+                    {% include "../components/checkbox.twig" with
+                        {
+                            'title' : 'Черный',
+                            'class' : 'checkbox',
+                            'class_label' : 'label__checkbox',
+                            'type' : 'checkbox',
+                            'name' : 'checkbox',
+                        } %}
+                    {% include "../components/checkbox.twig" with
+                        {
+                            'title' : 'Розовый',
+                            'class' : 'checkbox',
+                            'class_label' : 'label__checkbox',
+                            'type' : 'checkbox',
+                            'name' : 'checkbox',
+                        } %}
+                    {% include "../components/checkbox.twig" with
+                        {
+                            'title' : 'Оранжевый',
+                            'class' : 'checkbox',
+                            'class_label' : 'label__checkbox',
+                            'type' : 'checkbox',
+                            'name' : 'checkbox',
+                        } %}
+                </div>
             </div>
         </div>
 

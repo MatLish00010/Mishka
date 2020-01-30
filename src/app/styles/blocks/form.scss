@@ -38,6 +38,7 @@
 
   &__program-selection {
     padding-top: 75px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -70,11 +71,11 @@
     }
   }
 
-  &__radio {
+  .radio {
     display: none;
   }
 
-  &__radio:checked + .radio-btn::after {
+  .radio:checked + .radio-btn::after {
     content: "";
     position: absolute;
     width: 16px;
@@ -84,6 +85,61 @@
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &-background--gr {
+      background-color: #f1f1f1;
+    }
+    &--wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 700px;
+
+      .label__checkbox {
+        position: relative;
+        color: #000000;
+        line-height: 18px;
+        font-size: 19px;
+        display: flex;
+        align-items: flex-start;
+        width: 150px;
+        margin: 30px 0;
+        padding-left: 62px;
+      }
+
+      .checkbox {
+        display: none;
+      }
+
+      .checkbox + span:before {
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 35px;
+        border: 2px solid #444444;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .checkbox:checked + span:after {
+        content: "";
+        position: absolute;
+        background: url("../../images/png_sprite/check.png") no-repeat 50% 50%;
+        width: 21px;
+        height: 30px;
+        left: 11px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 

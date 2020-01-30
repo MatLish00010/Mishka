@@ -161,15 +161,16 @@
         </div>
     </form>
     <div class="form__wrap-submit">
-        {% include '../components/submit.twig' with
-            {
-                'title' : 'отправить заявку',
-            } %}
-        {% include '../components/important.twig' with
-            {
-                'title' : '*Поля обязательны для ззаполнения',
-            }
-        %}
+        <div class="container">
+            {% include '../components/submit.twig' with
+                {
+                    'title' : 'отправить заявку',
+                } %}
+            {% include '../components/important.twig' with
+                {
+                    'title' : '*Поля обязательны для ззаполнения',
+                } %}
+        </div>
     </div>
 
 </section>

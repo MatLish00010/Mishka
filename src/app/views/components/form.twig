@@ -8,9 +8,9 @@
 					Заполните простую форму заказа и мы свяжемся с вами,
 					чтобы уточнить детали.',
                     } %}
-                <div class="form__program-selection">
+                <div class="form__selection">
                     <h3 class="form__title">Тип</h3>
-                    <div class="form__program-selection--wrap">
+                    <div class="form__selection-wrap">
                         {% include 'radio.twig' with
                             {
                                 'title' : 'Аксессуар для интерьера',
@@ -88,39 +88,40 @@
                 </div>
             </div>
         </div>
-
     </form>
     <form action="#" method="post">
-        <div class="form__object">
-            <div class="container">
+        <div class="container">
+            <div class="form__object">
                 <h3 class="form__title">ФИО</h3>
-                {% include '../components/input.twig' with
-                    {
-                        'title' : 'Имя:',
-                        'class' : 'input--name',
-                        'type' : 'text',
-                        'placeholder' : 'Ввeдите ваше имя*',
-                        'name': 'name',
-                        'required' : '#',
-                    } %}
-                {% include '../components/input.twig' with
-                    {
-                        'title' : 'Фамилия:',
-                        'class' : 'input--name',
-                        'type' : 'text',
-                        'placeholder' : 'Укажите фамилию*',
-                        'name': 'name',
-                        'required' : '#',
-                    } %}
-                {% include '../components/input.twig' with
-                    {
-                        'title' : 'Отчество:',
-                        'class' : 'input--name',
-                        'type' : 'text',
-                        'placeholder' : 'Отчество, если желаете',
-                        'name': 'name',
-                        'required' : '#',
-                    } %}
+                <div class="form__object-wrap">
+                    {% include '../components/input.twig' with
+                        {
+                            'title' : 'Имя:',
+                            'class' : 'input--name',
+                            'type' : 'text',
+                            'placeholder' : 'Ввeдите ваше имя*',
+                            'name': 'name',
+                            'required' : '#',
+                        } %}
+                    {% include '../components/input.twig' with
+                        {
+                            'title' : 'Фамилия:',
+                            'class' : 'input--name',
+                            'type' : 'text',
+                            'placeholder' : 'Укажите фамилию*',
+                            'name': 'name',
+                            'required' : '#',
+                        } %}
+                    {% include '../components/input.twig' with
+                        {
+                            'title' : 'Отчество:',
+                            'class' : 'input--name',
+                            'type' : 'text',
+                            'placeholder' : 'Отчество, если желаете',
+                            'name': 'name',
+                            'required' : '#',
+                        } %}
+                </div>
             </div>
         </div>
     </form>
@@ -177,5 +178,4 @@
                 } %}
         </div>
     </div>
-
 </section>

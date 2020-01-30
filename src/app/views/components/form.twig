@@ -9,23 +9,25 @@
 					чтобы уточнить детали.',
                     } %}
                 <div class="form__program-selection">
-                    <h3 class="form__name">Тип</h3>
-                    {% include 'radio.twig' with
-                        {
-                            'title' : 'Аксессуар для интурьера',
-                            'class' : 'radio',
-                            'type' : 'radio',
-                            'name' : 'radio',
-                            'requierd' : '#',
-                        } %}
-                    {% include 'radio.twig' with
-                        {
-                            'title' : 'Детская игрушка',
-                            'class' : 'radio',
-                            'type' : 'radio',
-                            'name' : 'radio',
-                            'requierd' : '#',
-                        } %}
+                    <h3 class="form__title">Тип</h3>
+                    <div class="form__program-selection--wrap">
+                        {% include 'radio.twig' with
+                            {
+                                'title' : 'Аксессуар для интерьера',
+                                'class' : 'form__radio',
+                                'type' : 'radio',
+                                'name' : 'radio',
+                                'requierd' : '#',
+                            } %}
+                        {% include 'radio.twig' with
+                            {
+                                'title' : 'Детская игрушка',
+                                'class' : 'form__radio',
+                                'type' : 'radio',
+                                'name' : 'radio',
+                                'requierd' : '#',
+                            } %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,7 +35,7 @@
     <form action="#" method="post">
         <div class="form__name">
             <div class="container">
-                <h3 class="form__program-name">Цвет</h3>
+                <h3 class="form__title">Цвет</h3>
                 {% include "../components/checkbox.twig" with
                     {
                         'title' : 'Белый',
@@ -89,7 +91,7 @@
     <form action="#" method="post">
         <div class="form__object">
             <div class="container">
-                <h3 class="form__name">ФИО</h3>
+                <h3 class="form__title">ФИО</h3>
                 {% include '../components/input.twig' with
                     {
                         'title' : 'Имя:',
@@ -123,7 +125,7 @@
     <form action="#" method="post">
         <div class="form__email">
             <div class="container">
-                <h3 class="form__name">e-mai</h3>
+                <h3 class="form__title">e-mai</h3>
                 {% include '../components/input-email.twig' with
                     {
                         'modifier' : 'label--email',
@@ -135,7 +137,7 @@
                         'placeholder' : 'misha@doc.com',
                         'required' : '#',
                     } %}
-                <h3 class="form__name">тел</h3>
+                <h3 class="form__title">тел</h3>
                 {% include '../components/input-email.twig' with
                     {
                         'modifier' : 'label--email',
@@ -153,6 +155,7 @@
     <form action="#" method="post">
         <div class="form__textarea">
             <div class="container">
+                <h3 class="form__title">Доп</h3>
                 {% include '../components/textarea.twig' with
                     {
                         'description' : 'Опишите свои пожелания к заказу',

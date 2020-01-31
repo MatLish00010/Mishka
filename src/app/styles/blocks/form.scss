@@ -180,8 +180,12 @@
     &-wrap {
       display: flex;
       flex-wrap: wrap;
-      width: 380px;
+      width: 280px;
       @include tablet {
+        width: 600px;
+      }
+
+      @include desktop {
         width: 700px;
       }
 
@@ -192,6 +196,11 @@
         display: flex;
         align-items: flex-start;
         width: inherit;
+        margin-bottom: 20px;
+
+        @include tablet {
+          margin: 0;
+        }
 
         .input--name {
           border: none;
@@ -219,6 +228,14 @@
         }
         span {
           font-weight: 600;
+          font-size: 13px;
+          @include tablet {
+            font-size: 15px;
+          }
+
+          @include desktop {
+            font-size: 18px;
+          }
         }
       }
     }

@@ -19,8 +19,6 @@
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
-      margin-left: -20px;
-      margin-right: -20px;
 
 
       &-sub {
@@ -188,7 +186,7 @@
 
     &--mobile {
       position: relative;
-      margin: 20px -20px 0;
+      margin: 20px 0;
       display: flex;
       justify-content: center;
 
@@ -226,8 +224,8 @@
   &__toggle {
     position: absolute;
     right: 0;
-    top: 9px;
-    transform: translateX(-240%);
+    top: 30px;
+    transform: translateX(-100%);
     margin: 0;
     border-radius: 0;
     font-size: 0;
@@ -237,6 +235,10 @@
 
     &--cross {
       @include png-sprite($icon-menu-close);
+    }
+
+    @include tablet {
+      display: none;
     }
   }
 }

@@ -1,3 +1,4 @@
+
 .form {
   position: relative;
   width: 100%;
@@ -6,6 +7,16 @@
 
   @include tablet {
     padding-top: 55px;
+  }
+
+  .container {
+    max-width: 320px;
+    @include tablet {
+      max-width: 1150px;
+    }
+    @include desktop {
+      max-width: 1200px;
+    }
   }
 
   .title-description {
@@ -34,6 +45,13 @@
     width: 175px;
     margin-bottom: 35px;
     text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+    @include desktop {
+      text-align: center;
+    }
   }
 
   &__selection {
@@ -89,18 +107,27 @@
 
   &__name {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
     &-background--gr {
       background-color: #f1f1f1;
     }
-    &--wrap {
+    &-wrap {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
-      width: 700px;
+      align-items: center;
+      @include tablet {
+        flex-direction: row;
+        width: 700px;
+      }
 
       .label__checkbox {
         position: relative;
@@ -144,13 +171,19 @@
   &__object {
     padding-top: 50px;
     display: flex;
-    flex-direction: row;
-    width: 700px;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
 
     &-wrap {
       display: flex;
       flex-wrap: wrap;
-      width: inherit;
+      width: 380px;
+      @include tablet {
+        width: 700px;
+      }
 
       .label {
         position: relative;
@@ -173,6 +206,15 @@
           &[placeholder] {
             padding-left: 20px;
             padding-bottom: 7px;
+            outline: none;
+            font-size: 13px;
+
+            @include tablet {
+              font-size: 15px;
+            }
+            @include desktop {
+              font-size: 18px;
+            }
           }
         }
         span {

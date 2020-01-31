@@ -1,8 +1,8 @@
 <header class="header">
     <nav class="header__nav">
         <div class="header__nav header__nav--main">
-            <div class="container">
-                <div class="header__nav header__nav--mobile">
+            <div class="header__nav header__nav--mobile">
+                <div class="container">
                     <a href="/">
                         {% include '../components/img.twig' with {
                             'title': 'Mishka-logo',
@@ -10,34 +10,34 @@
                             'src' : '/images/iconic/mishka-logo-mobile.png',
                         } %}
                     </a>
-                    <button class="header__toggle header__toggle" type="button">
-                        <span class="visually-hidden">Открыть меню</span>
-                    </button>
                 </div>
-                <ul class="header__list header__list--closed">
-                    <li class="header__title header__title--catalog">
-                        <a href="catalog.html">Каталог товаров</a>
-                    </li>
-                    <li class="header__title header__title--order">
-                        <a href="feedback.html">Вязание на заказ</a>
-                    </li>
-                    <li class="header__title header__title--logo">
-                        <a href="/">{% include '../components/img.twig' with {
-                                'title': 'Mishka-logo',
-                                'img_class' : 'header__logo',
-                                'tablet_src' : '/images/iconic/mishka-logo-tablet.png',
-                                'src' : '/images/iconic/mishka-logo-desktop.png',
-                                'responsive' : 'true',
-                            } %}</a>
-                    </li>
-                    <li class="header__title header__title--search">
-                        <a href="#">Поиск по сайту</a>
-                    </li>
-                    <li class="header__title header__title--basket">
-                        <a href="#">Корзина:<span>пока пуста</span></a>
-                    </li>
-                </ul>
+                <button class="header__toggle header__toggle" type="button">
+                    <span class="visually-hidden">Открыть меню</span>
+                </button>
             </div>
+            <ul class="header__list header__list--closed">
+                <li class="header__title header__title--catalog">
+                    <a href="catalog.html">Каталог товаров</a>
+                </li>
+                <li class="header__title header__title--order">
+                    <a href="feedback.html">Вязание на заказ</a>
+                </li>
+                <li class="header__title header__title--logo">
+                    <a href="/">{% include '../components/img.twig' with {
+                            'title': 'Mishka-logo',
+                            'img_class' : 'header__logo',
+                            'tablet_src' : '/images/iconic/mishka-logo-tablet.png',
+                            'src' : '/images/iconic/mishka-logo-desktop.png',
+                            'responsive' : 'true',
+                        } %}</a>
+                </li>
+                <li class="header__title header__title--search">
+                    <a href="#">Поиск по сайту</a>
+                </li>
+                <li class="header__title header__title--basket">
+                    <a href="#">Корзина:<span>пока пуста</span></a>
+                </li>
+            </ul>
         </div>
         <div class="header__nav-sub--{{ mod }}">
             <div class="header__nav header__nav-sub container">

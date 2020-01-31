@@ -119,6 +119,7 @@
     &-background--gr {
       background-color: #f1f1f1;
     }
+
     &-wrap {
       display: flex;
       flex-direction: column;
@@ -168,6 +169,7 @@
       }
     }
   }
+
   &__object {
     padding-top: 50px;
     display: flex;
@@ -226,6 +228,7 @@
             }
           }
         }
+
         span {
           font-weight: 600;
           font-size: 13px;
@@ -237,6 +240,70 @@
             font-size: 18px;
           }
         }
+      }
+    }
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+
+    h3 {
+      text-align: left;
+    }
+
+    label {
+      position: relative;
+      width: 100%;
+    }
+
+    &-wrap {
+      padding-bottom: 20px;
+
+      .input--email, .input--tel {
+        border: none;
+        background: inherit;
+        border-bottom: 2px solid #000000;
+        height: 38px;
+        color: #444444;
+        font-size: 13px;
+        width: 260px;
+        outline: none;
+        position: relative;
+
+        @include tablet {
+          width: 600px;
+        }
+        @include desktop {
+          width: 700px;
+        }
+      }
+
+      .label--email:after {
+        content: "";
+        position: absolute;
+        background-image: url("../../images/png_sprite/email.png");
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 9px;
+      }
+
+      .label--tel:after {
+        content: "";
+        position: absolute;
+        background-image: url("../../images/png_sprite/phone.png");
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 23px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 9px;
       }
     }
   }

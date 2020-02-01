@@ -250,9 +250,17 @@
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
+    @include tablet {
+      align-items: flex-start;
+    }
 
     h3 {
       text-align: left;
+      @include tablet {
+        text-align: center;
+        padding-right: 24px;
+        margin-left: 20px;
+      }
     }
 
     label {
@@ -262,6 +270,12 @@
 
     &-wrap {
       padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        flex-direction: row;
+        align-items: flex-end;
+      }
 
       .input--email, .input--tel {
         border: none;
@@ -292,6 +306,9 @@
         top: 50%;
         transform: translateY(-50%);
         right: 9px;
+        @include tablet {
+          right: 40px;
+        }
       }
 
       .label--tel:after {
@@ -304,6 +321,9 @@
         top: 50%;
         transform: translateY(-50%);
         right: 9px;
+        @include tablet {
+          right: 40px;
+        }
       }
     }
   }

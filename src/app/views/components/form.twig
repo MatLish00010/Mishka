@@ -1,13 +1,15 @@
 <section class="form">
     <div class="form__background-white">
         <div class="container">
-            <div class="form__wrap">
-                {% include '../components/title-description.twig' with
-                    {
-                        'item_description' : 'Мы будем рады воплотить в жизнь ваши пожелания!
+            {% include '../components/title-description.twig' with
+                {
+                    'item_description' : 'Мы будем рады воплотить в жизнь ваши пожелания!
 					Заполните простую форму заказа и мы свяжемся с вами,
 					чтобы уточнить детали.',
-                    } %}
+                } %}
+        </div>
+        <div class="form__wrap">
+            <div class="container">
                 <div class="form__selection">
                     <h3 class="form__title">Тип</h3>
                     <div class="form__selection-wrap">
@@ -32,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="form__background-gray">
+    <div class="form__wrap background-gray">
         <div class="container">
             <div class="form__name">
                 <h3 class="form__title">Цвет</h3>
@@ -89,7 +91,7 @@
             </div>
         </div>
     </div>
-    <div class="form__background-white">
+    <div class="form__wrap">
         <div class="container">
             <div class="form__object">
                 <h3 class="form__title">ФИО</h3>
@@ -125,7 +127,7 @@
             </div>
         </div>
     </div>
-    <div class="form__background-gray">
+    <div class="form__wrap background-gray">
         <div class="container">
             <div class="form__email">
                 <div class="form__email-wrap">
@@ -157,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div class="form__background-white">
+    <div class="form__wrap">
         <div class="container">
             <div class="form__positioner">
                 <h3 class="form__title">Доп</h3>

@@ -77,6 +77,10 @@
       font-size: 18px;
       border-bottom: 2px #ececec solid;
       font-weight: bold;
+      transition: 0.3s;
+      &:hover {
+        color: #63d1bb;
+      }
 
       @include tablet {
         border-bottom: none;

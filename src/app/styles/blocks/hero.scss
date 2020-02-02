@@ -66,6 +66,7 @@
   }
 
   &__title {
+    cursor: pointer;
     &--interior {
       background-color: #63d1bb;
       position: relative;
@@ -89,7 +90,6 @@
       position: relative;
       @include tablet {
         width: 100%;
-
       }
 
       &:after {

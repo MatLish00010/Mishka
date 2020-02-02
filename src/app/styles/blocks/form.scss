@@ -9,6 +9,10 @@
     padding-top: 55px;
   }
 
+  &__background-gray {
+    background-color: #f1f1f1;
+  }
+
   .container {
     max-width: 320px;
     @include tablet {
@@ -44,7 +48,7 @@
     margin: 0;
     width: 175px;
     margin-bottom: 35px;
-    text-align: center;
+    text-align: left;
 
     @include tablet {
       text-align: left;
@@ -114,10 +118,6 @@
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
-    }
-
-    &-background--gr {
-      background-color: #f1f1f1;
     }
 
     &-wrap {
@@ -330,6 +330,59 @@
         @include tablet {
           right: 40px;
         }
+      }
+    }
+  }
+
+  &__positioner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__wrap-textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .textarea {
+      width: 234px;
+      height: 118px;
+      padding: 11px;
+      color: #444444;
+      line-height: 20px;
+      font-size: 18px;
+      border: 2px solid black;
+      outline: none;
+      @include tablet {
+        width: 510px;
+      }
+      @include desktop {
+        width: 680px;
+      }
+    }
+  }
+
+  &__wrap-submit {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 0;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      width: 100%;
+    }
+
+    .important {
+      font-size: 15px;
+      padding-bottom: 20px;
+      @include tablet {
+        margin-left: 10px;
       }
     }
   }

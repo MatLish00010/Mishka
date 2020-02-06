@@ -79,6 +79,7 @@
       border-bottom: 2px #ececec solid;
       font-weight: bold;
       transition: 0.3s;
+
       &:hover {
         color: #63d1bb;
       }
@@ -217,6 +218,7 @@
           background-color: #f1f1f1;
         }
       }
+
       &--index {
         background-color: #fafafa;
       }
@@ -228,6 +230,7 @@
   }
 
   &__toggle {
+    outline: none;
     position: absolute;
     right: 0;
     top: 30px;

@@ -49,6 +49,10 @@
       margin: 0;
       font-weight: bold;
       max-width: 296px;
+      font-size: 13px;
+      @include tablet {
+        font-size: 18px;
+      }
     }
   }
 }

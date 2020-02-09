@@ -107,13 +107,16 @@
   width: 260px;
   height: 150px;
   margin-top: 95px;
-  background: url("../../images/big_img/bg-play.jpg") no-repeat;
+  background: url("../images/big_img/bg-play.jpg") no-repeat;
   @include tablet {
     position: relative;
     width: 682px;
     height: 455px;
-    background: url("../../images/big_img/bg-play.jpg") no-repeat;
+    background: url("../images/big_img/bg-play.jpg") no-repeat;
     margin-top: 0;
+  }
+  &__new-play-btn {
+    display: none;
   }
 }
 
@@ -130,29 +133,10 @@
 }
 
 .video-youtube__content-btn {
-  width: 10000%;
-  height: 10000%;
-  transform: scale(0.01);
+  width: 100%;
+  height: 100%;
   transform-origin: top left;
   display: block;
 }
 
-.video-youtube__new-play-btn {
-  max-width: 153px;
-  max-height: 153px;
-  width: 100px;
-  height: 78px;
-  border: none;
-  background-color: transparent;
-  background-image: url(../../images/png_icon/play.png);
-  -webkit-background-size: contain;
-  background-size: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  cursor: pointer;
-  transition: 0.4s;
-}
 

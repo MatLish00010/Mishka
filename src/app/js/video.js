@@ -7,7 +7,7 @@ function onYouTubePlayerAPIReady() {
     var playerYoutube;
 
     playerYoutube = new YT.Player("video-youtube__content", {
-        videoId: "XcaUNpFsmg4",
+        videoId: "OCzy9bjSzj4",
         playerVars: {
             // 'controls': 0,
             // 'showinfo': 0,

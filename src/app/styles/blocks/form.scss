@@ -177,12 +177,8 @@
       .checkbox:checked + span:after {
         content: "";
         position: absolute;
-        background: url("../../images/png_sprite/check.png") no-repeat 50% 50%;
-        width: 21px;
-        height: 30px;
-        left: 11px;
-        top: 50%;
-        transform: translateY(-50%);
+        @include png-sprite($icon-check);
+        left: 5px;
       }
     }
   }
@@ -324,10 +320,7 @@
       .label--email:after {
         content: "";
         position: absolute;
-        background-image: url("../../images/png_sprite/email.png");
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 24px;
+        @include png-sprite($icon-email);
         top: 50%;
         transform: translateY(-50%);
         right: 9px;
@@ -336,10 +329,7 @@
       .label--tel:after {
         content: "";
         position: absolute;
-        background-image: url("../../images/png_sprite/phone.png");
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 23px;
+        @include png-sprite($icon-phone);
         top: 50%;
         transform: translateY(-50%);
         right: 9px;

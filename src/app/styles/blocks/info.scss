@@ -2,17 +2,6 @@
   margin-top: 100px;
   margin-bottom: 10px;
   position: relative;
-
-  @include tablet {
-    &:before {
-      content: "";
-      position: absolute;
-      background-image: url(../../images/svg-icon/zigzag-line.png);
-      width: 100%;
-      height: 22px;
-      top: -60px;
-    }
-  }
 }
 
 .info {

@@ -17,30 +17,12 @@
     {% include 'modal.twig' %}
 </div>
 {% block scripts %}
-    <script>
-        var navMain = document.querySelector('.header__list--closed');
-        var navToggle = document.querySelector('.header__toggle');
-        var navTogglebtn = document.querySelector('.header__toggle');
-
-
-        navToggle.addEventListener('click', function () {
-            if (navMain.classList.contains('header__list--closed')) {
-                navMain.classList.remove('header__list--closed');
-                navMain.classList.add('header__list--opened');
-                navTogglebtn.classList.add('header__toggle--cross');
-            } else {
-                navMain.classList.add('header__list--closed');
-                navMain.classList.remove('header__list--opened');
-                navTogglebtn.classList.add('header__nav__toggle');
-                navTogglebtn.classList.remove('header__toggle--cross');
-            }
-        });
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/libraries.js"></script>
-    <script type="text/javascript" src="/js/libs/slick.min.js"></script>
-    <script type="text/javascript" src="/js/js.js"></script>
-    <script type="text/javascript" src="/js/modal.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/libraries.js"></script>
+    <script type="text/javascript" src="js/libs/slick.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/video.js"></script>
 {% endblock %}
 </body>
